@@ -1,0 +1,65 @@
+
+@import 'config/variables';
+
+
+body {
+  background-image: url('../img/background.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+a {
+  .login #backtoblog &,
+  .login #nav & {
+    color: $color-link;
+    &:hover {
+      color: $color-link-hover;
+    }
+    &:active {
+      color: $color-link-active;
+    }
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+.wp-core-ui p .button {
+  background-color: $color-brand-secondary;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  text-shadow: none;
+  padding: $padding-sml;
+}
+
+input[type="checkbox"]:before {
+  opacity: 0
+}
+
+input[type="checkbox"]:checked:before {
+  color: $color-brand-primary;
+}
+
+
+.login {
+
+  font-family: $sans-serif;
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px 16px;
+  }
+
+  form {
+    background-color: rgba($color-accent-light, 0.5);
+  }
+
+  label {
+    color: $color-accent-dark;
+    font-family: $serif;
+  }
+}

@@ -1,0 +1,45 @@
+body {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-position: center center; }
+
+.login #backtoblog a,
+.login #nav a {
+  color: #b73030; }
+  .login #backtoblog a:hover,
+  .login #nav a:hover {
+    color: #661b1b; }
+  .login #backtoblog a:active,
+  .login #nav a:active {
+    color: #150606; }
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px white inset; }
+
+.wp-core-ui p .button {
+  background-color: #b73030;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  text-shadow: none;
+  padding: 12px; }
+
+input[type="checkbox"]:before {
+  opacity: 0; }
+
+input[type="checkbox"]:checked:before {
+  color: #41A2A3; }
+
+.login {
+  font-family: "proxima-nova", Arial, sans-serif; }
+  .login input[type="text"],
+  .login input[type="password"] {
+    padding: 10px 16px; }
+  .login form {
+    background-color: rgba(254, 254, 254, 0.5); }
+  .login label {
+    color: #303030;
+    font-family: "freight-text-pro", Georgia, serif; }

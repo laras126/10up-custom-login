@@ -1,0 +1,50 @@
+
+
+// Literal Colors
+
+$white:     #fefefe;
+$grey:      #585858;
+$dark-grey: #303030;
+
+$teal:      #41A2A3;
+$red:       #b73030;
+
+
+// Semantic Colors
+
+// -- Brand
+$color-brand-primary:   $teal;
+$color-brand-secondary: $red;
+$color-brand-tertiary:  $dark-grey;
+
+// -- General
+$color-accent-light:  $white;
+$color-accent-med:    $grey;
+$color-accent-dark:   $dark-grey;
+
+// -- Links
+$color-link:          $color-brand-secondary;
+$color-link-hover:    darken($color-link, 20%);
+$color-link-active:   darken($color-link, 40%);
+
+
+
+// Typography
+
+$serif:       'freight-text-pro', Georgia, serif;
+$sans-serif:  'proxima-nova', Arial, sans-serif;
+
+
+
+// Sizes
+
+$font-size-base: 16px;
+
+$padding-base:  $font-size-base;
+
+$padding-sml:   $font-size-base * 0.75;
+$padding-lg:   $font-size-base * 1.25;
+
+
+
+
