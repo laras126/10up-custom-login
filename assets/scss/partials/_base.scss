@@ -1,11 +1,10 @@
 
+
 body {
   background-size: cover;
   background-position: center center;
   background-image: url('../img/background.png');
-  // background-image: url('../img/header-page-contact.jpg');
 
-  // background-color: $color-accent-dark;
   @include brand-animation(background-color-rotation, 30s);
 }
 

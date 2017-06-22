@@ -1,33 +1,36 @@
+
+// Local variables
 $form-width:  480px;
 $input-width: 320px;
-// $label-width: $form-width - $input-width;
 
 
 #login {
   width: 90%;
   max-width: $form-width;
+  position: relative;
+
   @include bp(md) {
     padding-top: 15%;
     padding-right: 5%;
   }
 }
 
-.login #login_error, .login .message {
-  // background-color: rgba($color-accent-light, 0.7);
-}
 
 #wp-submit {
+  // Overrides
   height: auto;
-  background-color: $color-link;
-  border: 1px solid darken($color-link, 5%);
   border-radius: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 600;
   text-shadow: none;
-  padding: $size-xsml $size-h3;
-  font-size: $size-base;
+
+  background-color: $color-link;
   transition: 0.25s ease background-color;
+  border: 1px solid darken($color-link, 5%);
+
+  @include upperspace;
+  font-weight: $font-weight-strong;
+  font-size: $size-base;
+
+  padding: $size-xsml $size-h3;
 
   &:hover {
     background-color: $color-link-hover;
@@ -38,24 +41,32 @@ $input-width: 320px;
   }
 }
 
+
 .login {
 
   form {
     background-color: rgba($color-accent-light, 0);
-    box-shadow: none;
     border-bottom: 1px solid rgba($color-accent-light, 0.5);
 
     label {
       color: $color-accent-light;
       margin-bottom: $size-base;
-
-      // Labels display horizontally at larger sizes
-      @include bp(sm) {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
     }
+  }
+
+
+  // Subtle brand color overrides
+
+  .message,
+  #login_error {
+    text-align: center;
+    background-color: rgba($color-accent-light, 0.7);
+    border-top: 4px solid $color-brand-secondary;
+    border-left: none; // Override
+  }
+
+  #login_error {
+    border-top-color: $color-brand-primary;
   }
 
   input[type="checkbox"]:checked:before {
@@ -63,28 +74,37 @@ $input-width: 320px;
   }
 
 
+
   // Remove default box shadows
+  form,
+  .message,
+  #login_error,
   input[type="text"],
   input[type="password"],
   input[type="checkbox"],
   input[type="submit"] {
     box-shadow: none;
+
     &:focus {
       box-shadow: none;
     }
   }
 
+
+
   // Styling inputs
+
   input[type="text"],
   input[type="password"] {
-    @include bp(sm) {
-      margin: 0 0 0 $size-xsml;
-    }
-    padding: $size-xsml $size-base;
     background-color: $color-accent-light;
     border: 2px solid $color-accent-light;
     font-family: $sans-serif;
     transition: 0.25s ease border-color;
+
+    padding: $size-xsml $size-base;
+    @include bp(sm) {
+      margin: 0 0 0 $size-xsml;
+    }
 
     &:focus {
       border-color: $color-brand-secondary;
@@ -92,7 +112,11 @@ $input-width: 320px;
   }
 
 
+
+  // ---
   // Layout
+  // ---
+
   input[type="text"],
   input[type="password"] {
     @include bp(sm) {
@@ -102,16 +126,23 @@ $input-width: 320px;
     }
   }
 
-  .forgetmenot {
+  // Display labels horizontally at larger sizes
+  label {
     @include bp(sm) {
-      margin-left: calc(100% - 320px); // 320px = $input-width
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 
-  #nav,
-  #backtoblog {
-    display: inline-block;
+  // Align checkbox with input
+  .forgetmenot {
+    @include bp(sm) {
+      margin-left: calc(100% - 320px); // 320px = $input-width (can't use Sass var here)
+    }
   }
+
+  // Float bottom links
 
   #backtoblog {
     float: left;
@@ -119,9 +150,9 @@ $input-width: 320px;
 
   #nav {
     float: right;
-    margin: 16px 0;
+    margin-top: 16px; // Necessary margin override
   }
 
-}
+} // -- .login
 
 

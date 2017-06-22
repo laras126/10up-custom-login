@@ -1,4 +1,8 @@
 
+// Welcome to the mixins file!
+
+
+// Breakpoints
 
 @mixin bp($point) {
   // Screen size variables in _variables.scss
@@ -26,8 +30,38 @@
 }
 
 
+// Hide an element, but keep it in the DOM
+
 @mixin visually-hidden {
   left: -999999px;
   position: absolute;
   opacity: 0;
+}
+
+
+// A common typography pattern
+
+@mixin upperspace() {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+// Consolidating an animation structure
+
+@mixin thirds-rotation(
+  $style:   background-color,
+  $first:   $color-brand-secondary,
+  $second:  $color-brand-primary,
+  $third:   $color-brand-tertiary) {
+
+  0% {
+     #{$style}: $first;
+  }
+  50% {
+     #{$style}: $second;
+  }
+  100% {
+     #{$style}: $third;
+  }
 }

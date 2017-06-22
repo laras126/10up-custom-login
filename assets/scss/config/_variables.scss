@@ -1,3 +1,5 @@
+
+
 // Welcome to the variables file!
 
 
@@ -12,21 +14,17 @@ $screen-lg:     70em;
 $screen-xl:     80em;
 
 
+
 // ---
 // Colors
 // ---
 
-// Literal Colors
-
+// -- Literal
 $white:     #fefefe;
 $grey:      #585858;
 $dark-grey: #303030;
-
 $teal:      #41A2A3;
 $red:       #b73030;
-
-
-// Semantic Colors
 
 // -- Brand
 $color-brand-primary:   $red;
@@ -45,18 +43,27 @@ $color-link-active:   darken($color-link, 40%);
 
 
 
+
+// ---
 // Typography
+// ---
 
 $serif:       'freight-text-pro', Georgia, serif;
 $sans-serif:  'proxima-nova', Arial, sans-serif;
 
+$line-height-base:   1.5;
+$line-height-sm:     1.3;
+
+$font-weight-strong: 600;
 
 
-// Sizes
+
+
+// ---
+// Sizing Scale
+// ---
 
 $size-base:         1.1rem;
-$line-height-base:  1.5;
-$line-height-sm:    1.3;
 
 $size-xsml:         $size-base*0.6;
 $size-sml:          $size-base*0.8;
