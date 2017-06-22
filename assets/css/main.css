@@ -46,14 +46,55 @@
   100% {
     fill: #3a9091; } }
 
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px #fefefe inset !important; }
+@-webkit-keyframes fill-rotation-grey {
+  0% {
+    fill: #d8d8d8; }
+  50% {
+    fill: #fefefe; }
+  100% {
+    fill: white; } }
+
+@keyframes fill-rotation-grey {
+  0% {
+    fill: #d8d8d8; }
+  50% {
+    fill: #fefefe; }
+  100% {
+    fill: white; } }
 
 body {
   background-size: cover;
   background-position: center center;
   background-image: url("../img/background.png");
-  background-color: #303030; }
+  -webkit-animation: background-color-rotation;
+          animation: background-color-rotation;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate-reverse;
+          animation-direction: alternate-reverse; }
+
+.login #backtoblog a,
+.login #nav a {
+  color: #e5e5e5; }
+  .login #backtoblog a:hover,
+  .login #nav a:hover {
+    color: #fefefe; }
+  .login #backtoblog a:active,
+  .login #nav a:active {
+    color: #fefefe; }
+
+.login {
+  font-family: "proxima-nova", Arial, sans-serif; }
+  .login h1 {
+    left: -999999px;
+    position: absolute;
+    opacity: 0; }
+  .login h1 a {
+    background-image: none; }
 
 .logo {
   display: -webkit-box;
@@ -69,6 +110,11 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media (min-width: 50em) {
+    .logo {
+      position: absolute;
+      left: 5%;
+      top: 5%; } }
 
 .logo:hover .logo-1, .logo:hover
 .logo-0 {
@@ -100,96 +146,54 @@ body {
           animation-direction: alternate-reverse; }
 
 .logo-up {
-  fill: #fefefe; }
-
-.login #backtoblog a,
-.login #nav a {
-  color: #fefefe; }
-  .login #backtoblog a:hover,
-  .login #nav a:hover {
-    color: #fefefe; }
-  .login #backtoblog a:active,
-  .login #nav a:active {
-    color: #fefefe; }
+  -webkit-animation: fill-rotation-grey;
+          animation: fill-rotation-grey;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate-reverse;
+          animation-direction: alternate-reverse; }
 
 #login {
   width: 90%;
   max-width: 480px; }
+  @media (min-width: 50em) {
+    #login {
+      padding-top: 15%;
+      padding-right: 5%; } }
 
 #wp-submit {
   height: auto;
   background-color: #41A2A3;
-  border: none;
+  border: 1px solid #3a9091;
   border-radius: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 600;
   text-shadow: none;
-  padding: 0.66rem 1.1rem;
+  padding: 0.66rem 1.98rem;
   font-size: 1.1rem;
   -webkit-transition: 0.25s ease background-color;
   -o-transition: 0.25s ease background-color;
   transition: 0.25s ease background-color; }
   #wp-submit:hover {
     background-color: #245a5a; }
+  #wp-submit:active {
+    background-color: #071111; }
 
-input[type="checkbox"]:checked:before {
-  color: #b73030; }
-
-input[type="text"],
-input[type="password"],
-input[type="checkbox"],
-#wp-submit {
+.login form {
+  background-color: rgba(254, 254, 254, 0);
   -webkit-box-shadow: none;
-          box-shadow: none; }
-  input[type="text"]:focus,
-  input[type="password"]:focus,
-  input[type="checkbox"]:focus,
-  #wp-submit:focus {
-    -webkit-box-shadow: none;
-            box-shadow: none; }
-
-.login {
-  font-family: "proxima-nova", Arial, sans-serif; }
-  .login h1 a {
-    background-image: none;
-    height: 0;
-    width: 0; }
-  .login input[type="text"],
-  .login input[type="password"] {
-    padding: 10px 16px;
-    background-color: #fefefe;
-    border: 2px solid #fefefe;
-    font-family: "proxima-nova", Arial, sans-serif;
-    -webkit-transition: 0.25s ease border-color;
-    -o-transition: 0.25s ease border-color;
-    transition: 0.25s ease border-color; }
+          box-shadow: none;
+  border-bottom: 1px solid rgba(254, 254, 254, 0.5); }
+  .login form label {
+    color: #fefefe;
+    margin-bottom: 1.1rem; }
     @media (min-width: 34em) {
-      .login input[type="text"],
-      .login input[type="password"] {
-        -webkit-flex-basis: 300px;
-            -ms-flex-preferred-size: 300px;
-                flex-basis: 300px;
-        -webkit-box-flex: 0;
-        -webkit-flex-grow: 0;
-            -ms-flex-positive: 0;
-                flex-grow: 0;
-        -webkit-flex-shrink: 0;
-            -ms-flex-negative: 0;
-                flex-shrink: 0; } }
-    .login input[type="text"]:focus,
-    .login input[type="password"]:focus {
-      border-color: #41A2A3; }
-  .login form {
-    background-color: rgba(254, 254, 254, 0.5);
-    -webkit-box-shadow: none;
-            box-shadow: none; }
-  .login label {
-    color: #303030;
-    font-family: "freight-text-pro", Georgia, serif;
-    display: block;
-    margin-bottom: 0.66rem; }
-    @media (min-width: 34em) {
-      .login label {
+      .login form label {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -202,3 +206,68 @@ input[type="checkbox"],
         -webkit-justify-content: space-between;
             -ms-flex-pack: justify;
                 justify-content: space-between; } }
+
+.login input[type="checkbox"]:checked:before {
+  color: #b73030; }
+
+.login input[type="text"],
+.login input[type="password"],
+.login input[type="checkbox"],
+.login input[type="submit"] {
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  .login input[type="text"]:focus,
+  .login input[type="password"]:focus,
+  .login input[type="checkbox"]:focus,
+  .login input[type="submit"]:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+
+.login input[type="text"],
+.login input[type="password"] {
+  padding: 0.66rem 1.1rem;
+  background-color: #fefefe;
+  border: 2px solid #fefefe;
+  font-family: "proxima-nova", Arial, sans-serif;
+  -webkit-transition: 0.25s ease border-color;
+  -o-transition: 0.25s ease border-color;
+  transition: 0.25s ease border-color; }
+  @media (min-width: 34em) {
+    .login input[type="text"],
+    .login input[type="password"] {
+      margin: 0 0 0 0.66rem; } }
+  .login input[type="text"]:focus,
+  .login input[type="password"]:focus {
+    border-color: #41A2A3; }
+
+@media (min-width: 34em) {
+  .login input[type="text"],
+  .login input[type="password"] {
+    -webkit-flex-basis: 320px;
+        -ms-flex-preferred-size: 320px;
+            flex-basis: 320px;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; } }
+
+@media (min-width: 34em) {
+  .login .forgetmenot {
+    margin-left: calc(100% - 320px); } }
+
+.login #nav,
+.login #backtoblog {
+  display: inline-block; }
+
+.login #backtoblog {
+  float: left; }
+
+.login #nav {
+  float: right;
+  margin: 16px 0; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #fefefe inset !important; }
