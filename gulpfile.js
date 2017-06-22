@@ -3,6 +3,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     notify = require('gulp-notify'),
+    cssnano = require('gulp-cssnano'),
     rename = require('gulp-rename'),
     autoprefix = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create();
@@ -20,7 +21,7 @@ gulp.task('sass', function() {
     }))
     .pipe(gulp.dest('assets/css'))
     .pipe(rename({suffix: '.min'}))
-    //.pipe(cssnano())
+    .pipe(cssnano())
     .pipe(gulp.dest('assets/css'));
 });
 
