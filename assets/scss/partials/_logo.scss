@@ -1,20 +1,23 @@
 
 .logo {
+  transform: scale(0); // Begin at size 0
+  animation: scaleIn 1s ease-in-out; // Reveal
+
   display: flex;
   align-items: center;
   flex-direction: column;
-  @include bp(md) {
+
+  // Logo absolutely positioned left on large screens
+  @include bp(lg) {
     position: absolute;
-    left: 5%;
+    left: -30%;
     top: 5%;
   }
-}
 
-.logo-1,
-.logo-0 {
 
-  .logo:hover & {
-    animation-play-state: paused;
+  // Class added when animation completes
+  &.js-complete {
+    transform: scale(1);
   }
 }
 
