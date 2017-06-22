@@ -1,0 +1,127 @@
+$form-width:  480px;
+$input-width: 320px;
+// $label-width: $form-width - $input-width;
+
+
+#login {
+  width: 90%;
+  max-width: $form-width;
+  @include bp(md) {
+    padding-top: 15%;
+    padding-right: 5%;
+  }
+}
+
+.login #login_error, .login .message {
+  // background-color: rgba($color-accent-light, 0.7);
+}
+
+#wp-submit {
+  height: auto;
+  background-color: $color-link;
+  border: 1px solid darken($color-link, 5%);
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-shadow: none;
+  padding: $size-xsml $size-h3;
+  font-size: $size-base;
+  transition: 0.25s ease background-color;
+
+  &:hover {
+    background-color: $color-link-hover;
+  }
+
+  &:active {
+    background-color: $color-link-active;
+  }
+}
+
+.login {
+
+  form {
+    background-color: rgba($color-accent-light, 0);
+    box-shadow: none;
+    border-bottom: 1px solid rgba($color-accent-light, 0.5);
+
+    label {
+      color: $color-accent-light;
+      margin-bottom: $size-base;
+
+      // Labels display horizontally at larger sizes
+      @include bp(sm) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked:before {
+    color: $color-brand-primary;
+  }
+
+
+  // Remove default box shadows
+  input[type="text"],
+  input[type="password"],
+  input[type="checkbox"],
+  input[type="submit"] {
+    box-shadow: none;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  // Styling inputs
+  input[type="text"],
+  input[type="password"] {
+    @include bp(sm) {
+      margin: 0 0 0 $size-xsml;
+    }
+    padding: $size-xsml $size-base;
+    background-color: $color-accent-light;
+    border: 2px solid $color-accent-light;
+    font-family: $sans-serif;
+    transition: 0.25s ease border-color;
+
+    &:focus {
+      border-color: $color-brand-secondary;
+    }
+  }
+
+
+  // Layout
+  input[type="text"],
+  input[type="password"] {
+    @include bp(sm) {
+      flex-basis: $input-width;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+  }
+
+  .forgetmenot {
+    @include bp(sm) {
+      margin-left: calc(100% - 320px); // 320px = $input-width
+    }
+  }
+
+  #nav,
+  #backtoblog {
+    display: inline-block;
+  }
+
+  #backtoblog {
+    float: left;
+  }
+
+  #nav {
+    float: right;
+    margin: 16px 0;
+  }
+
+}
+
+

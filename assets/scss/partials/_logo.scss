@@ -1,0 +1,31 @@
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include bp(md) {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+  }
+}
+
+.logo-1,
+.logo-0 {
+
+  .logo:hover & {
+    animation-play-state: paused;
+  }
+}
+
+.logo-1 {
+  @include brand-animation(fill-rotation-reverse);
+}
+
+.logo-0 {
+  @include brand-animation(fill-rotation);
+}
+
+.logo-up {
+  @include brand-animation(fill-rotation-grey);
+}
