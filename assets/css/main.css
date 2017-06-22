@@ -1,11 +1,106 @@
+@-webkit-keyframes background-color-rotation {
+  0% {
+    background-color: #41A2A3; }
+  50% {
+    background-color: #b73030; }
+  100% {
+    background-color: #303030; } }
+
+@keyframes background-color-rotation {
+  0% {
+    background-color: #41A2A3; }
+  50% {
+    background-color: #b73030; }
+  100% {
+    background-color: #303030; } }
+
+@-webkit-keyframes fill-rotation {
+  0% {
+    fill: #b73030; }
+  50% {
+    fill: #3d3d3d; }
+  100% {
+    fill: #41A2A3; } }
+
+@keyframes fill-rotation {
+  0% {
+    fill: #b73030; }
+  50% {
+    fill: #3d3d3d; }
+  100% {
+    fill: #41A2A3; } }
+
+@-webkit-keyframes fill-rotation-reverse {
+  0% {
+    fill: #a32b2b; }
+  50% {
+    fill: #303030; }
+  100% {
+    fill: #3a9091; } }
+
+@keyframes fill-rotation-reverse {
+  0% {
+    fill: #a32b2b; }
+  50% {
+    fill: #303030; }
+  100% {
+    fill: #3a9091; } }
+
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px #fefefe inset !important; }
 
 body {
   background-size: cover;
   background-position: center center;
-  background-color: #41A2A3;
-  background-image: url("../img/background.png"); }
+  background-image: url("../img/background.png");
+  background-color: #303030; }
+
+.logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.logo:hover .logo-1, .logo:hover
+.logo-0 {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused; }
+
+.logo-1 {
+  -webkit-animation: fill-rotation-reverse;
+          animation: fill-rotation-reverse;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate-reverse;
+          animation-direction: alternate-reverse; }
+
+.logo-0 {
+  -webkit-animation: fill-rotation;
+          animation: fill-rotation;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate-reverse;
+          animation-direction: alternate-reverse; }
+
+.logo-up {
+  fill: #fefefe; }
 
 .login #backtoblog a,
 .login #nav a {
@@ -25,8 +120,6 @@ body {
   height: auto;
   background-color: #41A2A3;
   border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
   border-radius: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -42,12 +135,25 @@ body {
 input[type="checkbox"]:checked:before {
   color: #b73030; }
 
+input[type="text"],
+input[type="password"],
+input[type="checkbox"],
+#wp-submit {
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="checkbox"]:focus,
+  #wp-submit:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+
 .login {
   font-family: "proxima-nova", Arial, sans-serif; }
   .login h1 a {
-    background-image: url("../img/login-logo.svg");
-    height: 120px;
-    width: 100px; }
+    background-image: none;
+    height: 0;
+    width: 0; }
   .login input[type="text"],
   .login input[type="password"] {
     padding: 10px 16px;
@@ -56,9 +162,7 @@ input[type="checkbox"]:checked:before {
     font-family: "proxima-nova", Arial, sans-serif;
     -webkit-transition: 0.25s ease border-color;
     -o-transition: 0.25s ease border-color;
-    transition: 0.25s ease border-color;
-    -webkit-box-shadow: none;
-            box-shadow: none; }
+    transition: 0.25s ease border-color; }
     @media (min-width: 34em) {
       .login input[type="text"],
       .login input[type="password"] {
@@ -74,9 +178,7 @@ input[type="checkbox"]:checked:before {
                 flex-shrink: 0; } }
     .login input[type="text"]:focus,
     .login input[type="password"]:focus {
-      border-color: #41A2A3;
-      -webkit-box-shadow: none;
-              box-shadow: none; }
+      border-color: #41A2A3; }
   .login form {
     background-color: rgba(254, 254, 254, 0.5);
     -webkit-box-shadow: none;
