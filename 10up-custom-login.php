@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: 10up Custom Login
- * Description: Customizations to the WordPress login screen for 10up.
+ * Description: Customizations to the WordPress login screen for 10.
  * Version: 1.0
  * Author: Lara Schenck
  * Author URI: https://notlaura.com
@@ -29,7 +29,7 @@ add_action( 'login_enqueue_scripts', 'tcl_enqueue_assets' );
 function tcl_login_logo_url() {
   return get_bloginfo( 'url' );
 }
-add_filter( 'login_headerurl', 'tcl_login_logo_url' );
+add_action( 'login_headerurl', 'tcl_login_logo_url' );
 
 
 // Add SVG markup to header
@@ -40,5 +40,6 @@ function tcl_add_svg_loginheader() {
   <path class="logo-0" d="M255.1 0c-70.6 0-127.9 57.2-127.9 127.9 0 19.5 4.5 37.9 12.3 54.4l1.3 1.4 79-79L195 79.9h108.1V188l-24.8-24.8-79.4 79.5c17 8.4 36.1 13.2 56.3 13.2 70.6 0 127.9-57.2 127.9-127.9-.1-70.8-57.4-128-128-128z"/>
 </svg></a></div>';
 }
-add_filter( 'login_message', 'tcl_add_svg_loginheader' );
+add_action( 'login_message', 'tcl_add_svg_loginheader' );
+
 
