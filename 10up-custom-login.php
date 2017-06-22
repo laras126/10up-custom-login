@@ -17,10 +17,11 @@ function tcl_fonts() {
 }
 add_action('login_head', 'tcl_fonts');
 
-function tcl_styles() {
+function tcl_enqueue_assets() {
   wp_enqueue_style( 'custom-login', plugin_dir_url( __FILE__) . 'assets/css/main.css' );
+  wp_enqueue_script( 'custom-login', plugin_dir_url( __FILE__) . 'assets/js/main.js' );
 }
-add_action( 'login_enqueue_scripts', 'tcl_styles' );
+add_action( 'login_enqueue_scripts', 'tcl_enqueue_assets' );
 
 
 ?>

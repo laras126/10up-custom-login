@@ -1,45 +1,102 @@
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #fefefe inset !important; }
+
 body {
-  background-image: url("../img/background.jpg");
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  background-color: #41A2A3;
+  background-image: url("../img/background.png"); }
 
 .login #backtoblog a,
 .login #nav a {
-  color: #b73030; }
+  color: #fefefe; }
   .login #backtoblog a:hover,
   .login #nav a:hover {
-    color: #661b1b; }
+    color: #fefefe; }
   .login #backtoblog a:active,
   .login #nav a:active {
-    color: #150606; }
+    color: #fefefe; }
 
-input:-webkit-autofill,
-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 30px white inset; }
+#login {
+  width: 90%;
+  max-width: 480px; }
 
-.wp-core-ui p .button {
-  background-color: #b73030;
+#wp-submit {
+  height: auto;
+  background-color: #41A2A3;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: 0;
   text-transform: uppercase;
+  letter-spacing: 1px;
   text-shadow: none;
-  padding: 12px; }
-
-input[type="checkbox"]:before {
-  opacity: 0; }
+  padding: 0.66rem 1.1rem;
+  font-size: 1.1rem;
+  -webkit-transition: 0.25s ease background-color;
+  -o-transition: 0.25s ease background-color;
+  transition: 0.25s ease background-color; }
+  #wp-submit:hover {
+    background-color: #245a5a; }
 
 input[type="checkbox"]:checked:before {
-  color: #41A2A3; }
+  color: #b73030; }
 
 .login {
   font-family: "proxima-nova", Arial, sans-serif; }
+  .login h1 a {
+    background-image: url("../img/login-logo.svg");
+    height: 120px;
+    width: 100px; }
   .login input[type="text"],
   .login input[type="password"] {
-    padding: 10px 16px; }
+    padding: 10px 16px;
+    background-color: #fefefe;
+    border: 2px solid #fefefe;
+    font-family: "proxima-nova", Arial, sans-serif;
+    -webkit-transition: 0.25s ease border-color;
+    -o-transition: 0.25s ease border-color;
+    transition: 0.25s ease border-color;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+    @media (min-width: 34em) {
+      .login input[type="text"],
+      .login input[type="password"] {
+        -webkit-flex-basis: 300px;
+            -ms-flex-preferred-size: 300px;
+                flex-basis: 300px;
+        -webkit-box-flex: 0;
+        -webkit-flex-grow: 0;
+            -ms-flex-positive: 0;
+                flex-grow: 0;
+        -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+                flex-shrink: 0; } }
+    .login input[type="text"]:focus,
+    .login input[type="password"]:focus {
+      border-color: #41A2A3;
+      -webkit-box-shadow: none;
+              box-shadow: none; }
   .login form {
-    background-color: rgba(254, 254, 254, 0.5); }
+    background-color: rgba(254, 254, 254, 0.5);
+    -webkit-box-shadow: none;
+            box-shadow: none; }
   .login label {
     color: #303030;
-    font-family: "freight-text-pro", Georgia, serif; }
+    font-family: "freight-text-pro", Georgia, serif;
+    display: block;
+    margin-bottom: 0.66rem; }
+    @media (min-width: 34em) {
+      .login label {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }

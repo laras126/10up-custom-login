@@ -1,65 +1,106 @@
-
 @import 'config/variables';
-
+@import 'config/mixins';
+@import 'shame';
 
 body {
-  background-image: url('../img/background.jpg');
   background-size: cover;
   background-position: center center;
+  // background-size: cover;
+
+  background-color: $color-brand-secondary;
+  background-image: url('../img/background.png');
+  // background-blend-mode: soft-light;
+  // filter: gray;
+  // position: relative;
 }
 
 a {
   .login #backtoblog &,
   .login #nav & {
-    color: $color-link;
+    color: $color-accent-light;
     &:hover {
-      color: $color-link-hover;
+      color: $color-accent-light;
     }
     &:active {
-      color: $color-link-active;
+      color: $color-accent-light;
     }
   }
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 30px white inset;
+#login {
+  width: 90%;
+  max-width: 480px;
 }
 
-.wp-core-ui p .button {
+#wp-submit {
+  height: auto;
   background-color: $color-brand-secondary;
   border: none;
   box-shadow: none;
   border-radius: 0;
   text-transform: uppercase;
+  letter-spacing: 1px;
   text-shadow: none;
-  padding: $padding-sml;
-}
+  padding: $size-xsml $size-base;
+  font-size: $size-base;
+  transition: 0.25s ease background-color;
 
-input[type="checkbox"]:before {
-  opacity: 0
+  &:hover {
+    background-color: darken($color-brand-secondary, 20%);
+  }
 }
 
 input[type="checkbox"]:checked:before {
   color: $color-brand-primary;
 }
 
-
 .login {
-
   font-family: $sans-serif;
+
+  h1 a {
+    background-image: url('../img/login-logo.svg');
+    height: 120px;
+    width: 100px;
+  }
 
   input[type="text"],
   input[type="password"] {
     padding: 10px 16px;
+    background-color: $color-accent-light;
+    border: 2px solid $color-accent-light;
+    font-family: $sans-serif;
+    transition: 0.25s ease border-color;
+    box-shadow: none;
+
+    @include bp(sm) {
+      flex-basis: 300px;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+
+    &:focus {
+      border-color: $color-brand-secondary;
+      box-shadow: none;
+    }
   }
 
   form {
     background-color: rgba($color-accent-light, 0.5);
+    box-shadow: none;
   }
 
   label {
     color: $color-accent-dark;
     font-family: $serif;
+
+    display: block;
+    margin-bottom: $size-xsml;
+
+    @include bp(sm) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 }
+
