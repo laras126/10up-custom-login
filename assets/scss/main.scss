@@ -1,17 +1,42 @@
+
 @import 'config/variables';
 @import 'config/mixins';
+@import 'config/animations';
 @import 'shame';
+
 
 body {
   background-size: cover;
   background-position: center center;
-  // background-size: cover;
-
-  background-color: $color-brand-secondary;
   background-image: url('../img/background.png');
-  // background-blend-mode: soft-light;
-  // filter: gray;
-  // position: relative;
+  background-color: $color-brand-tertiary;
+  // @include brand-animation(background-color-rotation);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-1,
+.logo-0 {
+
+  .logo:hover & {
+    animation-play-state: paused;
+  }
+}
+
+.logo-1 {
+  @include brand-animation(fill-rotation-reverse);
+}
+
+.logo-0 {
+  @include brand-animation(fill-rotation);
+}
+
+.logo-up {
+  fill: $color-accent-light;
 }
 
 a {
@@ -35,8 +60,8 @@ a {
 #wp-submit {
   height: auto;
   background-color: $color-brand-secondary;
+
   border: none;
-  box-shadow: none;
   border-radius: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -54,13 +79,25 @@ input[type="checkbox"]:checked:before {
   color: $color-brand-primary;
 }
 
+// Remove default box shadows
+input[type="text"],
+input[type="password"],
+input[type="checkbox"],
+#wp-submit {
+  box-shadow: none;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+
 .login {
   font-family: $sans-serif;
 
   h1 a {
-    background-image: url('../img/login-logo.svg');
-    height: 120px;
-    width: 100px;
+    background-image: none;
+    height: 0;
+    width: 0;
   }
 
   input[type="text"],
@@ -70,7 +107,6 @@ input[type="checkbox"]:checked:before {
     border: 2px solid $color-accent-light;
     font-family: $sans-serif;
     transition: 0.25s ease border-color;
-    box-shadow: none;
 
     @include bp(sm) {
       flex-basis: 300px;
@@ -80,7 +116,6 @@ input[type="checkbox"]:checked:before {
 
     &:focus {
       border-color: $color-brand-secondary;
-      box-shadow: none;
     }
   }
 

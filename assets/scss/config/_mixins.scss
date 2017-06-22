@@ -1,7 +1,7 @@
 
 
 @mixin bp($point) {
-  // These screen sized map to the screen variables in _varibles.scss
+  // Screen size variables in _variables.scss
   $bp-xs: "(min-width: #{$screen-xs})";
   $bp-sm: "(min-width: #{$screen-sm})";
   $bp-md: "(min-width: #{$screen-md})";

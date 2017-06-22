@@ -1,0 +1,44 @@
+@mixin thirds-rotation(
+  $style:   background-color,
+  $first:   $color-brand-secondary,
+  $second:  $color-brand-primary,
+  $third:   $color-brand-tertiary) {
+
+  0% {
+     #{$style}: $first;
+  }
+  50% {
+     #{$style}: $second;
+  }
+  100% {
+     #{$style}: $third;
+  }
+}
+
+@keyframes background-color-rotation {
+  @include thirds-rotation;
+}
+
+@keyframes fill-rotation {
+  @include thirds-rotation(
+    $style:   fill,
+    $first:   $color-brand-primary,
+    $second:  lighten($color-brand-tertiary, 5%),
+    $third:   $color-brand-secondary);
+}
+
+@keyframes fill-rotation-reverse {
+  @include thirds-rotation(
+    $style:   fill,
+    $first:   darken($color-brand-primary, 5%),
+    $second:  $color-brand-tertiary,
+    $third:   darken($color-brand-secondary, 5%));
+}
+
+@mixin brand-animation($animation, $duration: 5s) {
+  animation: $animation;
+  animation-duration: $duration;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
