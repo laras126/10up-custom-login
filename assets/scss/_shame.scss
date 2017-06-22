@@ -1,0 +1,6 @@
+
+// Override Chrome's yellow autofill background.
+// I probably wouldn't do this for a production site.
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px $color-accent-light inset !important;
+}
