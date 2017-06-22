@@ -24,3 +24,10 @@
     @media #{$bp-xl} { @content; }
   }
 }
+
+
+@mixin visually-hidden {
+  left: -999999px;
+  position: absolute;
+  opacity: 0;
+}

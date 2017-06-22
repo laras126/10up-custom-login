@@ -35,6 +35,14 @@
     $third:   darken($color-brand-secondary, 5%));
 }
 
+@keyframes fill-rotation-grey {
+  @include thirds-rotation(
+    $style:   fill,
+    $first:   darken($color-accent-light, 15%),
+    $second:  $color-accent-light,
+    $third:   lighten($color-accent-light, 5%));
+}
+
 @mixin brand-animation($animation, $duration: 5s) {
   animation: $animation;
   animation-duration: $duration;
