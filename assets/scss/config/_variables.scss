@@ -19,24 +19,24 @@ $screen-xl:     80em;
 // Colors
 // ---
 
-// -- Literal
+// Literal
 $white:     #fefefe;
 $grey:      #585858;
 $dark-grey: #303030;
 $teal:      #41A2A3;
 $red:       #b73030;
 
-// -- Brand
+// Brand
 $color-brand-primary:   $red;
 $color-brand-secondary: $teal;
 $color-brand-tertiary:  $dark-grey;
 
-// -- General
+// General
 $color-accent-light:  $white;
 $color-accent-med:    $grey;
 $color-accent-dark:   $dark-grey;
 
-// -- Links
+// Links
 $color-link:          $color-brand-secondary;
 $color-link-hover:    darken($color-link, 20%);
 $color-link-active:   darken($color-link, 40%);
@@ -49,7 +49,7 @@ $color-link-active:   darken($color-link, 40%);
 // ---
 
 $serif:       'freight-text-pro', Georgia, serif;
-$sans-serif:  'proxima-nova', Arial, sans-serif;
+$sans-serif:  'proxima-nova', sans-serif;
 
 $line-height-base:   1.5;
 $line-height-sm:     1.3;

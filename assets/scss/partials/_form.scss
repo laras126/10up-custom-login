@@ -1,5 +1,5 @@
 
-// Local variables
+// Local file variables
 $form-width:  480px;
 $input-width: 320px;
 
@@ -62,7 +62,7 @@ $input-width: 320px;
     text-align: center;
     background-color: rgba($color-accent-light, 0.7);
     border-top: 4px solid $color-brand-secondary;
-    border-left: none; // Override
+    border-left: none;
   }
 
   #login_error {
@@ -150,7 +150,7 @@ $input-width: 320px;
 
   #nav {
     float: right;
-    margin-top: 16px; // Necessary margin override
+    margin-top: 16px; // Necessary margin override to match #backtoblog
   }
 
 } // -- .login

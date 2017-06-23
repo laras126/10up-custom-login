@@ -1,8 +1,11 @@
 
+
 // Welcome to the mixins file!
 
 
+// ----
 // Breakpoints
+// ----
 
 @mixin bp($point) {
   // $screen-xx variables in _variables.scss
@@ -35,17 +38,14 @@
 // Helpers
 // ----
 
-// Hide an element, but keep it in the DOM
-
+// Hide an element
 @mixin visually-hidden {
   left: -999999px;
   position: absolute;
   opacity: 0;
 }
 
-
 // A common typography pattern
-
 @mixin upperspace() {
   text-transform: uppercase;
   letter-spacing: 1px;
