@@ -1,11 +1,18 @@
 
+// ----
+// The Table of Contents
+// ----
+
+// Configuration
 @import 'config/variables';
 @import 'config/mixins';
 @import 'config/animations';
 
+// Style partials
 @import 'partials/base';
 @import 'partials/logo';
 @import 'partials/form';
 
+// Shame file, or weird overrides
 @import 'shame';
 

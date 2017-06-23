@@ -136,7 +136,7 @@ $input-width: 320px;
   // Align checkbox with input
   .forgetmenot {
     @include bp(sm) {
-      margin-left: calc(100% - 320px); // 320px = $input-width (can't use Sass var here)
+      margin-left: calc(100% - 320px); // 320px = $input-width (can't use Sass var in calc)
     }
   }
 
