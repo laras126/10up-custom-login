@@ -114,7 +114,7 @@ body {
     color: #fefefe; }
 
 .login {
-  font-family: "proxima-nova", Arial, sans-serif; }
+  font-family: "proxima-nova", sans-serif; }
   .login h1 {
     left: -999999px;
     position: absolute;
@@ -266,7 +266,7 @@ body {
 .login input[type="password"] {
   background-color: #fefefe;
   border: 2px solid #fefefe;
-  font-family: "proxima-nova", Arial, sans-serif;
+  font-family: "proxima-nova", sans-serif;
   -webkit-transition: 0.25s ease border-color;
   -o-transition: 0.25s ease border-color;
   transition: 0.25s ease border-color;

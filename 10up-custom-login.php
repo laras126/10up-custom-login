@@ -11,7 +11,7 @@
  */
 
 
-// Add fonts with general head hook
+// Add Typekit font
 function tcl_fonts() {
   echo "<script>
    WebFontConfig = {
