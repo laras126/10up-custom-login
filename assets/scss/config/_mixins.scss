@@ -5,7 +5,7 @@
 // Breakpoints
 
 @mixin bp($point) {
-  // Screen size variables in _variables.scss
+  // $screen-xx variables in _variables.scss
   $bp-xs: "(min-width: #{$screen-xs})";
   $bp-sm: "(min-width: #{$screen-sm})";
   $bp-md: "(min-width: #{$screen-md})";
@@ -30,6 +30,11 @@
 }
 
 
+
+// ----
+// Helpers
+// ----
+
 // Hide an element, but keep it in the DOM
 
 @mixin visually-hidden {
@@ -47,7 +52,10 @@
 }
 
 
-// Consolidating an animation structure
+
+// ----
+// Animations
+// ----
 
 @mixin thirds-rotation(
   $style:   background-color,
@@ -65,3 +73,13 @@
      #{$style}: $third;
   }
 }
+
+// Used for the brand color rotations
+@mixin brand-animation($animation, $duration: 5s) {
+  animation: $animation;
+  animation-duration: $duration;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
