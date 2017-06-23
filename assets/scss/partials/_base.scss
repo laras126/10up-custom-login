@@ -7,7 +7,7 @@ body {
   background-image: url('../img/background.png');
 
   .wf-active & { // Use webfont when loaded
-    font-family: $sans-serif;
+    font-family: $webfont;
   }
 
   @include brand-animation(background-color-rotation, 30s);
