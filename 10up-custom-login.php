@@ -2,25 +2,42 @@
 
 /**
  * Plugin Name: 10up Custom Login
+ * Plugin URI: https://github.com/laras126/10up-custom-login
  * Description: Customizations to the WordPress login screen for 10.
  * Version: 1.0
  * Author: Lara Schenck
  * Author URI: https://notlaura.com
+ * Text Domain: 10up-login
  */
 
 
 // Add fonts with general head hook
 function tcl_fonts() {
-  echo '<script src="https://use.typekit.net/thk4mzv.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>';
+  echo "<script>
+   WebFontConfig = {
+      typekit: { id: 'thk4mzv' }
+   };
+   (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+      wf.async = true;
+      s.parentNode.insertBefore(wf, s);
+   })(document);
+</script>";
 }
 add_action('login_head', 'tcl_fonts');
 
 
 // Enqueue CSS and JS
 function tcl_enqueue_assets() {
-  wp_enqueue_style( 'custom-login', plugin_dir_url( __FILE__) . 'assets/css/main.css' );
-  wp_enqueue_script( 'custom-login', plugin_dir_url( __FILE__) . 'assets/js/main.js' );
+  // Load unminified file if WP_ENV is set to development
+  if (WP_ENV == 'development') {
+    wp_enqueue_style( 'tcl-css', plugin_dir_url( __FILE__) . 'assets/css/main.css' );
+  } else {
+    wp_enqueue_style( 'custom-login', plugin_dir_url( __FILE__) . 'assets/css/main.min.css' );
+  }
+
+  wp_enqueue_script( 'tcl-js', plugin_dir_url( __FILE__) . 'assets/js/main.js' );
 }
 add_action( 'login_enqueue_scripts', 'tcl_enqueue_assets' );
 
