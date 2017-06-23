@@ -312,11 +312,18 @@ body {
   .login .forgetmenot {
     margin-left: calc(100% - 320px); } }
 
+.login #backtoblog,
+.login #nav {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%; }
+
 .login #backtoblog {
   float: left; }
 
 .login #nav {
   float: right;
+  text-align: right;
   margin-top: 16px; }
 
 input:-webkit-autofill {

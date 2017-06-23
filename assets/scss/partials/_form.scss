@@ -17,7 +17,6 @@ $input-width: 320px;
 
 
 #wp-submit {
-  // Overrides
   height: auto;
   border-radius: 0;
   text-shadow: none;
@@ -144,12 +143,19 @@ $input-width: 320px;
 
   // Float bottom links
 
+  #backtoblog,
+  #nav {
+    box-sizing: border-box;
+    width: 50%;
+  }
+
   #backtoblog {
     float: left;
   }
 
   #nav {
     float: right;
+    text-align: right;
     margin-top: 16px; // Necessary margin override to match #backtoblog
   }
 
