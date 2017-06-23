@@ -48,7 +48,7 @@ $color-link-active:   darken($color-link, 40%);
 // Typography
 // ---
 
-$webfont:           'proxima-nova';
+$webfont-stack:      'proxima-nova',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 
 $line-height-base:   1.5;
 $line-height-sm:     1.3;
