@@ -3,7 +3,7 @@
 /**
  * Plugin Name: 10up Custom Login
  * Plugin URI: https://github.com/laras126/10up-custom-login
- * Description: Customizations to the WordPress login screen for 10.
+ * Description: Customizations to the WordPress login screen for 10up.
  * Version: 1.0
  * Author: Lara Schenck
  * Author URI: https://notlaura.com

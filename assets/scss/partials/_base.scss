@@ -6,6 +6,10 @@ body {
   background-position: center center;
   background-image: url('../img/background.png');
 
+  .wf-active & { // Use webfont when loaded
+    font-family: $sans-serif;
+  }
+
   @include brand-animation(background-color-rotation, 30s);
 }
 
@@ -23,7 +27,6 @@ a {
 }
 
 .login {
-  font-family: $sans-serif;
 
   h1 {
     @include visually-hidden;

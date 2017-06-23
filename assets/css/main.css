@@ -102,6 +102,8 @@ body {
           animation-iteration-count: infinite;
   -webkit-animation-direction: alternate-reverse;
           animation-direction: alternate-reverse; }
+  .wf-active body {
+    font-family: "proxima-nova"; }
 
 .login #backtoblog a,
 .login #nav a {
@@ -113,14 +115,13 @@ body {
   .login #nav a:active {
     color: #fefefe; }
 
-.login {
-  font-family: "proxima-nova", sans-serif; }
-  .login h1 {
-    left: -999999px;
-    position: absolute;
-    opacity: 0; }
-  .login h1 a {
-    background-image: none; }
+.login h1 {
+  left: -999999px;
+  position: absolute;
+  opacity: 0; }
+
+.login h1 a {
+  background-image: none; }
 
 .logo {
   -webkit-transform: scale(0);
@@ -266,7 +267,6 @@ body {
 .login input[type="password"] {
   background-color: #fefefe;
   border: 2px solid #fefefe;
-  font-family: "proxima-nova", sans-serif;
   -webkit-transition: 0.25s ease border-color;
   -o-transition: 0.25s ease border-color;
   transition: 0.25s ease border-color;
