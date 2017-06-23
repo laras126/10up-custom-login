@@ -30,6 +30,6 @@ gulp.task('watch', function () {
     proxy: 'wp.local/wp-login.php'
   });
   gulp.watch('assets/**/*.scss', ['sass']);
-  //gulp.watch(['assets/css/*.css', 'assets/js/*.js']).on('change', browserSync.reload);
+  gulp.watch(['assets/css/*.css', 'assets/js/*.js']).on('change', browserSync.reload);
 });
 
