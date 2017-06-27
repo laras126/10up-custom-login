@@ -20,7 +20,7 @@
   }
 
   // Class added when animation completes
-  &.js-complete {
+  &.complete {
     transform: scale(1);
     opacity: 1;
   }

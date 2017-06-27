@@ -154,7 +154,7 @@ body {
       position: absolute;
       left: -30%;
       top: 5%; } }
-  .logo.js-complete {
+  .logo.complete {
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1);
